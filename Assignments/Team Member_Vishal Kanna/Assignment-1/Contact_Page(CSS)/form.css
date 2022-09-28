@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url(data:image/jpeg;base64,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);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.heading{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 25px;
+}
+#head{
+    font-size: 1.8em;
+    margin-top: 10px;
+}
+#c1{
+    width: 80%;
+    margin: auto;
+}
+form{
+    background-color: honeydew;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 5px;
+    padding-bottom: 40px;
+}
+form .box{
+    width: 98.5%;
+    height: 2.7em;
+    position:relative;
+    bottom: 10px;
+    padding-left: 2px;
+    border-radius: 5px;
+    border: 0;
+}
+form .box1{
+    width: 98.5%;
+    height: 6em;
+    position:relative;
+    bottom: 10px;
+    padding-left: 2px;
+    border-radius: 5px;
+    border: 0;
+}
