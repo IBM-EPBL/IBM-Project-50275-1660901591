@@ -1,14 +1,15 @@
 <html>
     <head>
         <title>ASSIGNMENT FORM</title>
-        <link rel="stylesheet" type="text/css" href="form.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+        <!-- <link rel="stylesheet" type="text/css" href="form.css"> -->
     </head>
     <body>
         <div class="heading">
             <h1 id="head">IBM Contact Form</h1>
             <h2 id="sub">Please fill all the details</h2>
         </div>
-        <form action="details.html">
+        <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
             <div id="c1">
                 <label>NAME</label><br><br>
                 <input type="name" placeholder="Enter Your Name" class="box"><br><br>
