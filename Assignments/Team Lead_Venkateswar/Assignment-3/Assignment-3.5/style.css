@@ -4,7 +4,7 @@
 	margin: 0;
 }
 .wrapper{
-	background: url(img.jpg) no-repeat;
+	
 	background-size: cover;
 	height: 100vh;
 }
@@ -14,10 +14,10 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(155, 120, 120, 0.4);
+	background: rgba(237, 147, 147, 0.4);
 }
 .navbar .logo{
-	width: 60px;
+	width: 100px;
 	height: auto;
 	padding: 10px 100px;
 }
@@ -41,7 +41,7 @@
 }
 .navbar ul li a.active,
 .navbar ul li a:hover{
-	background: red;
+	background: rgb(167, 149, 149);
 	border-radius: 2px;
 }
 .wrapper .center{
@@ -54,8 +54,8 @@
 }
 .center h1{
 	color: #ff4444;
-	font-size: 70px;
-	width: 900px;
+	
+	
 	font-weight: bold;
 	text-align: center;
 }
