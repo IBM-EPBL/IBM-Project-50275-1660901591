@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact Page</title>
+</head>
+<body>
+    <form action="http://localhost:5000/uploader" method="POST" enctype="multipart/form-data">
+    <h1><strong><center>Welcome to the Contact Page</center></strong></h1>
+    <h3><u>Please fill the following details to contact us :-</u></h3>
+    <table>
+        <tr>
+            <td><label for="name"><strong>Name :</strong></label></td>
+            <td><input id="name" type="name" name="name" placeholder="Enter name" required></td>
+        </tr>
+        <tr>
+            <td><label for="email"><strong>Email :</strong></label></td>
+            <td><input id="email" type="email" name="email" placeholder="Enter email" required></td>
+        </tr>
+        <tr>
+            <td><label for="address"><strong>Address :</strong></label></td>
+            <td><textarea id="address" name="textarea" rows="4" cols="50" placeholder="Enter address"  ></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="gender"><strong>Gender :</strong></label></td>
+            <td><input id="gender" type="radio"  value="male" >Male
+            <input id="gender" type="radio"  value="female">Female</td>
+        </tr>
+        <tr>
+            <td><label for="reason"><strong>Reason for contact :</strong></label></td>
+            <td><input id="job" type="checkbox" name="job" value="job"><label>Job Application</label>
+            <input id="feedback" type="checkbox" name="feedback" value="feedback"><label>Feedback</label></td>
+        </tr>
+        <tr>
+            <td><label for="files"><strong>Upload Files :</strong></label></td>
+            <td><input id="files" type="file" id="files" name="filename" ></td>
+        </tr>
+        <tr>
+            <td><label for="submit"><strong>Submit :</strong></label></td>
+            <td><input  type="submit"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+
