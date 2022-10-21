@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Plantation Website</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="logo.svg">
+				<ul>
+					<li><a class="active" href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+			</nav>
+			<div class="center">
+			<h1>Welcome</h1>
+			<h2>Lets plant together and help our Planet</h2>
+			<div class="buttons">
+			<button>Plant a Tree</button>
+			<button class="btn2">Make Donation</button>
+		</div>
+		</div>
+</body>
+<script>
+	window.watsonAssistantChatOptions = {
+	  integrationID: "15a4435f-1436-4f08-80b3-ee6562f30501", // The ID of this integration.
+	  region: "eu-gb", // The region your integration is hosted in.
+	  serviceInstanceID: "61970064-5683-4d3c-9227-7afbcfd44c4c", // The ID of your service instance.
+	  onLoad: function(instance) { instance.render(); }
+	};
+	setTimeout(function(){
+	  const t=document.createElement('script');
+	  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+	  document.head.appendChild(t);
+	});
+  </script>
+</html>
