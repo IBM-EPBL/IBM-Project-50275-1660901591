@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News application</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	<form action="/" method="post">
+		<div class="input-group mb-3">
+		<input type="text" class="form-control" name="keyword" placeholder="Enter keyword ...." aria-label="Recipient's username" aria-describedby="button-addon2">
+		<button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+		</div>
+	</form>
+	</div>
+	{% if all_headlines %}
+	<center><h1>Headlines</h1></center>
+	<div class="row row-cols-1 row-cols-md-2 g-4 mx-3 my-3">
+		{% for headline in all_headlines %}
+		<div class="col">
+			<div class="card h-100">
+			<img src="{{headline['urlToImage']}}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h3 class="card-title">{{headline['title']}}</h3>
+				<p class="card-text">{{headline['description']}} <a href="{{headline['url']}}" target="blank">Read More...</a></p>
+
+
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">{{headline['source']['name']}}</small>
+			</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+	{% if all_articles %}
+	<center><h1>Results for '{{keyword}}'</h1></center>
+	<div class="row row-cols-1 row-cols-md-2 g-4 mx-3 my-3">
+		{% for article in all_articles %}
+		<div class="col">
+			<div class="card h-100">
+			<img src="{{article['urlToImage']}}" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h3 class="card-title">{{article['title']}}</h3>
+				<p class="card-text">{{article['description']}} <a href="{{article['url']}}" target="blank">Read More...</a></p>
+
+
+			</div>
+			<div class="card-footer">
+				<small class="text-muted">{{article['source']['name']}}</small>
+			</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
