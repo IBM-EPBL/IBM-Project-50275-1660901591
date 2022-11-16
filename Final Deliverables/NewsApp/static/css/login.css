@@ -29,7 +29,7 @@ body{
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 10px;
+	margin: 50px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
@@ -40,7 +40,7 @@ body{
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 1%;
+	margin: 50px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
@@ -60,7 +60,7 @@ input{
 button{
 	width: 60%;
 	height: 40px;
-	margin: 10px auto;
+	margin: 20px auto;
 	justify-content: center;
 	display: block;
 	color: #8c30f5;
@@ -81,7 +81,7 @@ button:hover{
 	height: 460px;
 	background: #8c30f5;
 	border-radius: 60% / 10%;
-	transform: translateY(-100px);
+	transform: translateY(-25px);
 	transition: .8s ease-in-out;
 }
 .login .loginName{

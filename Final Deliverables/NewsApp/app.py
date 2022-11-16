@@ -1,5 +1,7 @@
+import os
 from flask import Flask, render_template, request,redirect, url_for, session
 from newsapi import NewsApiClient
+from flask_mail import Mail, Message
 import ibm_db
 import re
 # init flask app
@@ -56,7 +58,7 @@ def login():
             return redirect(url_for('home'))  
         else:
             msg = 'Incorrect username / password !'
-    return render_template('login-register.html', msg = msg)
+    return render_template('login.html', msg = msg)
 
         
 
@@ -88,6 +90,23 @@ def register():
             ibm_db.bind_param(prep_stmt, 3, password)
             ibm_db.execute(prep_stmt)
             msg = 'You have successfully registered !'
+            app.config['SECRET_KEY'] = 'top-secret!'
+            app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
+            app.config['MAIL_PORT'] = 587
+            app.config['MAIL_USE_TLS'] = True
+            app.config['MAIL_USERNAME'] = 'apikey'
+            app.config['MAIL_PASSWORD'] = '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'
+            app.config['MAIL_DEFAULT_SENDER'] = 'venkateswarsit2019@citchennai.net'
+            mail = Mail(app)
+            recipient = request.form['email']
+            msg = Message('Successfully Registered', recipients=[recipient])
+            msg.body = ('Congratulations! You have successfully registered with '
+                    'NewsApp!')
+            msg.html = ('<h1>Successfully Registered</h1>'
+                    '<p>Congratulations! You have successfully registered with '
+                    '<b>NewsApp</b>!</p>')
+            mail.send(msg)
+            return redirect(url_for('login'))
     elif request.method == 'POST':
         msg = 'Please fill out the form !'
     return render_template('login-register.html', msg = msg)

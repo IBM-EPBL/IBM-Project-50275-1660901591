@@ -11,7 +11,7 @@
 
 			<div class="signup">
                 <form action="/register" method="post">
-                    <div class="msg">{{ msg }}</div>
+                    
 					<label class="signName" for="chk" aria-hidden="true">Sign up</label>
                     <input type="text" name="username" placeholder="Enter Your Username"  id="username" required></br></br>
                     <input type="email" name="email" placeholder="Enter Your Email ID"  id="email" required></br></br>
@@ -19,11 +19,12 @@
                     
                     
                 <button type="submit" id="button" > Register </button>
+				<div class="msg">{{ msg }}</div>
                
 				</form>
 			</div>
 
-			<div class="login">
+			<!-- <div class="login">
 				<form action="/login" method="post">
                     <div class="msg">{{ msg }}</div>
 					<label class="loginName" for="chk" aria-hidden="true">Login</label>
@@ -31,7 +32,7 @@
                     <input type="password" name="password" placeholder="Enter Your Password" id="password" required></br></br>
 					<button>Login</button>
 				</form>
-			</div>
+			</div> -->
 	</div>
 </body>
 </html>
