@@ -9,10 +9,10 @@ app = Flask(__name__)
 app.secret_key = 'a'
 conn= ibm_db.connect("DATABASE=bludb;HOSTNAME=2f3279a5-73d1-4859-88f0-a6c3e6b4b907.c3n41cmd0nqnrk39u98g.databases.appdomain.cloud;PORT=30756;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=nkk12877;PWD=UUGFBq21gm6EiMIz",'','')
   
-# Init news api 
+
 newsapi = NewsApiClient(api_key='70fdb9ba81ba40b6bda148e672898bd9')
   
-# helper function
+
 def get_sources_and_domains():
     all_sources = newsapi.get_sources()['sources']
     sources = []

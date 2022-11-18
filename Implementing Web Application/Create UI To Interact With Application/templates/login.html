@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NewsApp</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+        <div class="login">
+				<form action="/login" method="post">
+                    
+					<label class="loginName" for="chk" aria-hidden="true">Login</label>
+                    <input type="text" name="username" placeholder="Enter Your Username"  id="username" required></br></br>
+                    <input type="password" name="password" placeholder="Enter Your Password" id="password" required></br></br>
+					<button>Login</button>
+                    <div class="msg">{{ msg }}</div>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
