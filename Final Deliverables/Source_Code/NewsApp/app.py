@@ -95,8 +95,8 @@ def register():
             app.config['MAIL_PORT'] = 587
             app.config['MAIL_USE_TLS'] = True
             app.config['MAIL_USERNAME'] = 'apikey'
-            app.config['MAIL_PASSWORD'] = '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'
-            app.config['MAIL_DEFAULT_SENDER'] = 'vigneshbit2019@citchennai.net'
+            app.config['MAIL_PASSWORD'] = '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'
+            app.config['MAIL_DEFAULT_SENDER'] = 'venkateswarsit2019@citchennai.net'
             mail = Mail(app)
             recipient = request.form['email']
             msg = Message('Successfully Registered', recipients=[recipient])
